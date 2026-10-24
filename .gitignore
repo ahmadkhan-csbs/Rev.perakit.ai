@@ -1,0 +1,40 @@
+# Dependencies
+node_modules/
+**/node_modules/
+
+# Next.js Build & Cache
+.next/
+**/.next/
+out/
+build/
+dist/
+**/dist/
+
+# Environment Variables & Secrets (NEVER COMMIT SENSITIVE API KEYS)
+.env
+.env*.local
+.env.production
+.env.development
+**/.env
+**/.env*.local
+!.env.example
+!**/.env.example
+
+# Logs & Temporary Files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+*.log
+**/*.log
+
+# Operating System & Editor Files
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+.vscode/
+.idea/
+
+# SQLite / Local Database
+*.db
+*.db-journal

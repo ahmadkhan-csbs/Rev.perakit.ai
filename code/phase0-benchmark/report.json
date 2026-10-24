@@ -1,0 +1,297 @@
+[
+  {
+    "id": "t01",
+    "category": "english-technical",
+    "run": "nova-3-multilingual",
+    "wer": 0,
+    "keyterms": "3/3",
+    "missing": [],
+    "hyp": "Can you explain how you would design a rate limiter for a distributed system using Redis? And what happens when a node fails?"
+  },
+  {
+    "id": "t01",
+    "category": "english-technical",
+    "run": "nova-3-en",
+    "wer": 0,
+    "keyterms": "3/3",
+    "missing": [],
+    "hyp": "Can you explain how you would design a rate limiter for a distributed system using Redis? And what happens when a node fails?"
+  },
+  {
+    "id": "t01",
+    "category": "english-technical",
+    "run": "nova-3-hi",
+    "wer": 0,
+    "keyterms": "3/3",
+    "missing": [],
+    "hyp": "Can you explain how you would design a rate limiter for a distributed system using ReDis? And what happens when a node fails?"
+  },
+  {
+    "id": "t02",
+    "category": "english-technical",
+    "run": "nova-3-multilingual",
+    "wer": 0,
+    "keyterms": "5/5",
+    "missing": [],
+    "hyp": "What is the difference between process and thread? And when would you use multiprocessing over multithreading in Python?"
+  },
+  {
+    "id": "t02",
+    "category": "english-technical",
+    "run": "nova-3-en",
+    "wer": 0,
+    "keyterms": "5/5",
+    "missing": [],
+    "hyp": "What is the difference between process and thread? And when would you use multiprocessing over multithreading in Python?"
+  },
+  {
+    "id": "t02",
+    "category": "english-technical",
+    "run": "nova-3-hi",
+    "wer": 11.1,
+    "keyterms": "4/5",
+    "missing": [
+      "multithreading"
+    ],
+    "hyp": "What is the difference between process and thread? And when would you use multiprocessing over multi threading in Python?"
+  },
+  {
+    "id": "t03",
+    "category": "english-behavioral-numbers",
+    "run": "nova-3-multilingual",
+    "wer": 0,
+    "keyterms": "3/3",
+    "missing": [],
+    "hyp": "Tell me about a time you improved performance. By what percentage did latency drop? And how many requests per second were you handling?"
+  },
+  {
+    "id": "t03",
+    "category": "english-behavioral-numbers",
+    "run": "nova-3-en",
+    "wer": 0,
+    "keyterms": "3/3",
+    "missing": [],
+    "hyp": "Tell me about a time you improved performance. By what percentage did latency drop? And how many requests per second were you handling?"
+  },
+  {
+    "id": "t03",
+    "category": "english-behavioral-numbers",
+    "run": "nova-3-hi",
+    "wer": 4.3,
+    "keyterms": "2/3",
+    "missing": [
+      "requests per second"
+    ],
+    "hyp": "Tell me about a time you improved performance. By what percentage did latency drop? And how many requests per 2nd were you handling?"
+  },
+  {
+    "id": "t04",
+    "category": "english-technical",
+    "run": "nova-3-multilingual",
+    "wer": 0,
+    "keyterms": "4/4",
+    "missing": [],
+    "hyp": "How does Kubernetes handle pod scheduling, and what is the role of ETCD in the control plane?"
+  },
+  {
+    "id": "t04",
+    "category": "english-technical",
+    "run": "nova-3-en",
+    "wer": 0,
+    "keyterms": "4/4",
+    "missing": [],
+    "hyp": "How does Kubernetes handle pod scheduling, and what is the role of ETCD in the control plane?"
+  },
+  {
+    "id": "t04",
+    "category": "english-technical",
+    "run": "nova-3-hi",
+    "wer": 5.9,
+    "keyterms": "3/4",
+    "missing": [
+      "Kubernetes"
+    ],
+    "hyp": "How does Cubernetis handle pod scheduling and what is the role of ETCD in the control plane?"
+  },
+  {
+    "id": "t05",
+    "category": "hinglish-code-switch",
+    "run": "nova-3-multilingual",
+    "wer": 76.2,
+    "keyterms": "2/3",
+    "missing": [
+      "PostgreSQL"
+    ],
+    "hyp": "तो आप मुझे बताओ आपने अपने last project में database optimization कैसे किया था? Postgress QL में indexing use किया था क्या?"
+  },
+  {
+    "id": "t05",
+    "category": "hinglish-code-switch",
+    "run": "nova-3-en",
+    "wer": 42.9,
+    "keyterms": "2/3",
+    "missing": [
+      "PostgreSQL"
+    ],
+    "hyp": "To aap muje batao, apne apne last project me database optimization kasi kiata. Postgres ql me indexing use kiata kya?"
+  },
+  {
+    "id": "t05",
+    "category": "hinglish-code-switch",
+    "run": "nova-3-hi",
+    "wer": 76.2,
+    "keyterms": "2/3",
+    "missing": [
+      "PostgreSQL"
+    ],
+    "hyp": "तो आप मुझे बताओ आपने अपने last project में database optimization कैसे किया था? Postgress QL में indexing use किया था क्या?"
+  },
+  {
+    "id": "t06",
+    "category": "hinglish-code-switch",
+    "run": "nova-3-multilingual",
+    "wer": 66.7,
+    "keyterms": "4/4",
+    "missing": [],
+    "hyp": "अगर production में server down हो जाए रात को तो आपका approach क्या होगा? पहले rollback करोगे या debugging start करोगे?"
+  },
+  {
+    "id": "t06",
+    "category": "hinglish-code-switch",
+    "run": "nova-3-en",
+    "wer": 95.2,
+    "keyterms": "1/4",
+    "missing": [
+      "production",
+      "rollback",
+      "debugging"
+    ],
+    "hyp": "If you are running the server, able to you approach next step."
+  },
+  {
+    "id": "t06",
+    "category": "hinglish-code-switch",
+    "run": "nova-3-hi",
+    "wer": 66.7,
+    "keyterms": "4/4",
+    "missing": [],
+    "hyp": "अगर production में server down हो जाए रात को तो आपका approach क्या होगा? पहले rollback करोगे या debugging start करोगे?"
+  },
+  {
+    "id": "t07",
+    "category": "hinglish-hr",
+    "run": "nova-3-multilingual",
+    "wer": 76.2,
+    "keyterms": "2/2",
+    "missing": [],
+    "hyp": "आप अपने current company में कितने साल से हो और आप switch क्यों करना चाहते हो? Expected CTC क्या है आपका?"
+  },
+  {
+    "id": "t07",
+    "category": "hinglish-hr",
+    "run": "nova-3-en",
+    "wer": 47.6,
+    "keyterms": "2/2",
+    "missing": [],
+    "hyp": "Aap hapne current company Mi kitne salse ho. Aap switch kune karna chaate ho. Expected CTC Kia hapka?"
+  },
+  {
+    "id": "t07",
+    "category": "hinglish-hr",
+    "run": "nova-3-hi",
+    "wer": 76.2,
+    "keyterms": "2/2",
+    "missing": [],
+    "hyp": "आप अपने current company में कितने साल से हो और आप switch क्यों करना चाहते हो? Expected CTC क्या है आपका?"
+  },
+  {
+    "id": "t08",
+    "category": "hindi-mixed",
+    "run": "nova-3-multilingual",
+    "wer": 90.9,
+    "keyterms": "2/2",
+    "missing": [],
+    "hyp": "आप मुझे अपने बारे में कुछ बताइए. आपकी सबसे बड़ी strength क्या है और आप team के साथ कैसे काम करते हैं?"
+  },
+  {
+    "id": "t08",
+    "category": "hindi-mixed",
+    "run": "nova-3-en",
+    "wer": 100,
+    "keyterms": "0/2",
+    "missing": [
+      "strength",
+      "team"
+    ],
+    "hyp": ""
+  },
+  {
+    "id": "t08",
+    "category": "hindi-mixed",
+    "run": "nova-3-hi",
+    "wer": 90.9,
+    "keyterms": "2/2",
+    "missing": [],
+    "hyp": "आप मुझे अपने बारे में कुछ बताइए. आपकी सबसे बड़ी strength क्या है और आप team के साथ कैसे काम करते हैं?"
+  },
+  {
+    "id": "t09",
+    "category": "english-technical",
+    "run": "nova-3-multilingual",
+    "wer": 0,
+    "keyterms": "3/3",
+    "missing": [],
+    "hyp": "Write a function that finds the longest substring without repeating characters. What will be the time complexity of your solution?"
+  },
+  {
+    "id": "t09",
+    "category": "english-technical",
+    "run": "nova-3-en",
+    "wer": 0,
+    "keyterms": "3/3",
+    "missing": [],
+    "hyp": "Write a function that finds the longest substring without repeating characters. What will be the time complexity of your solution?"
+  },
+  {
+    "id": "t09",
+    "category": "english-technical",
+    "run": "nova-3-hi",
+    "wer": 10,
+    "keyterms": "2/3",
+    "missing": [
+      "longest substring"
+    ],
+    "hyp": "Write a function that finds the longest sub string without repeating characters. What will be the time complexity of your solution?"
+  },
+  {
+    "id": "t10",
+    "category": "hinglish-code-switch",
+    "run": "nova-3-multilingual",
+    "wer": 72.7,
+    "keyterms": "1/2",
+    "missing": [
+      "Microservices"
+    ],
+    "hyp": "Micro services architecture में आपने कभी काम किया है. अगर एक service fail हो जाए तो आप circuit breaker pattern कैसे implement करोगे?"
+  },
+  {
+    "id": "t10",
+    "category": "hinglish-code-switch",
+    "run": "nova-3-en",
+    "wer": 45.5,
+    "keyterms": "2/2",
+    "missing": [],
+    "hyp": "Microservices architecture mi apne kabhi kaam ki ahai. Agar ek service fail hu jai to up circuit breaker pattern kasi implement karogay."
+  },
+  {
+    "id": "t10",
+    "category": "hinglish-code-switch",
+    "run": "nova-3-hi",
+    "wer": 72.7,
+    "keyterms": "1/2",
+    "missing": [
+      "Microservices"
+    ],
+    "hyp": "Micro services architecture में आपने कभी काम किया है. अगर एक service fail हो जाए तो आप circuit breaker pattern कैसे implement करोगे?"
+  }
+]

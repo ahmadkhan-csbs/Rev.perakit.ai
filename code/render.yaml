@@ -1,0 +1,17 @@
+# Render Blueprint — Rev gateway (free tier)
+# GitHub repo connect karke "New Blueprint" select karne par ye service khud ban jayegi.
+# Dashboard me sirf secret env vars (sync: false wale) bharne hain.
+services:
+  - type: web
+    name: rev-gateway
+    env: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm run start --workspace=@rev/gateway
+    envVars:
+      - key: LLM_PROVIDER
+        value: groq
+      - key: DEEPGRAM_API_KEY
+        sync: false # dashboard me khud bharna hai
+      - key: GROQ_API_KEY
+        sync: false # dashboard me khud bharna hai

@@ -1,0 +1,41 @@
+{
+  "name": "rev-desktop",
+  "version": "1.0.0",
+  "description": "Rev.perakit.ai — 100% Invisible Real-time AI Interview Copilot",
+  "private": true,
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build:win": "electron-builder --win --x64"
+  },
+  "build": {
+    "appId": "ai.perakit.rev",
+    "productName": "Rev.perakit.ai Invisible Copilot",
+    "directories": {
+      "output": "dist"
+    },
+    "win": {
+      "target": [
+        {
+          "target": "nsis",
+          "arch": ["x64"]
+        },
+        {
+          "target": "portable",
+          "arch": ["x64"]
+        }
+      ]
+    },
+    "nsis": {
+      "oneClick": true,
+      "perMachine": false,
+      "allowToChangeInstallationDirectory": false,
+      "shortcutName": "Rev.perakit.ai Copilot"
+    },
+    "files": [
+      "main.js",
+      "preload.js",
+      "package.json"
+    ]
+  }
+}

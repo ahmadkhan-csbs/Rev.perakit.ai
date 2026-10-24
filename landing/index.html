@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rev.perakit.ai — Interview me kabhi blank mat ho</title>
+<meta name="description" content="India's first Hinglish-ready AI interview copilot. Live answers from your resume in under 3 seconds. Join the waitlist.">
+<style>
+:root{
+  --bg:#070b08; --bg2:#0c120e; --card:#101711; --line:#1e2a20;
+  --green:#2ee86b; --green-dim:#9df3ba; --text:#e9f2ea; --muted:#9db3a0;
+  --amber:#ffc857; --radius:18px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,"Noto Sans",Arial,sans-serif;line-height:1.65;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1120px;margin:0 auto;padding:0 22px}
+a{color:inherit}
+/* NAV */
+nav{position:sticky;top:0;z-index:50;background:rgba(7,11,8,.85);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.nav-in{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
+.brand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:1.15rem;letter-spacing:.2px;text-decoration:none}
+.brand .bird{font-size:1.5rem}
+.brand b{color:var(--green)}
+.nav-links{display:flex;align-items:center;gap:18px;font-size:.92rem}
+.nav-links a{text-decoration:none;color:var(--muted);transition:color .15s}
+.nav-links a:hover{color:var(--green)}
+.btn{display:inline-block;background:var(--green);color:#04140a;font-weight:800;padding:11px 24px;border-radius:999px;text-decoration:none;border:0;cursor:pointer;font-size:.95rem;transition:transform .15s,box-shadow .15s;text-align:center}
+.btn:hover{transform:translateY(-2px);box-shadow:0 8px 28px rgba(46,232,107,.35)}
+.btn.ghost{background:transparent;color:var(--green);border:1.5px solid var(--green)}
+/* HERO */
+.hero{padding:74px 0 50px;text-align:center;position:relative;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;background:radial-gradient(600px 320px at 50% -40px,rgba(46,232,107,.14),transparent 70%);pointer-events:none}
+.badge{display:inline-block;border:1px solid var(--green);color:var(--green-dim);padding:7px 18px;border-radius:999px;font-size:.85rem;margin-bottom:24px;background:rgba(46,232,107,.07)}
+h1{font-size:clamp(2.3rem,5.5vw,4rem);line-height:1.12;font-weight:900;letter-spacing:-1px}
+h1 .hi{color:var(--green)}
+.lead{max-width:680px;margin:20px auto 0;color:var(--muted);font-size:1.1rem}
+.cta-row{margin-top:28px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.micro{margin-top:14px;color:var(--muted);font-size:.88rem}
+/* DEMO */
+.demo{max-width:860px;margin:48px auto 0;background:var(--card);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;text-align:left;box-shadow:0 24px 70px rgba(0,0,0,.5)}
+.demo-bar{display:flex;align-items:center;gap:8px;padding:12px 18px;border-bottom:1px solid var(--line);font-size:.85rem;color:var(--muted)}
+.demo-bar .dot{width:10px;height:10px;border-radius:50%;background:#ff5f57}
+.demo-bar .dot:nth-child(2){background:#febc2e}.demo-bar .dot:nth-child(3){background:#28c840}
+.live-tag{margin-left:auto;background:#ff3b30;color:#fff;font-size:.72rem;font-weight:800;padding:3px 10px;border-radius:6px;animation:blink 1.6s infinite}
+@keyframes blink{50%{opacity:.55}}
+.demo-body{display:grid;grid-template-columns:1fr 1.2fr;gap:0}
+.qpane{padding:22px;border-right:1px solid var(--line)}
+.apane{padding:22px}
+.pane-label{font-size:.72rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted);margin-bottom:12px}
+.qtext{font-size:1.02rem;min-height:96px}
+.ans{border-left:3px solid var(--green);padding-left:14px;font-size:.98rem}
+.ans strong{color:var(--green)}
+.ans ul{margin:10px 0 0 18px;color:var(--muted);font-size:.92rem}
+.resume-note{margin-top:14px;font-size:.78rem;color:var(--muted);background:rgba(46,232,107,.07);border:1px dashed var(--green);padding:8px 12px;border-radius:10px}
+.timer{font-variant-numeric:tabular-nums;color:var(--green);font-weight:800}
+/* SECTIONS */
+section{padding:65px 0}
+.sec-title{text-align:center;font-size:clamp(1.7rem,3.5vw,2.4rem);font-weight:800;margin-bottom:12px;letter-spacing:-.5px}
+.sec-sub{text-align:center;color:var(--muted);max-width:640px;margin:0 auto 40px}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:26px}
+.card .ico{font-size:2rem;margin-bottom:12px;display:block}
+.card h3{font-size:1.1rem;margin-bottom:8px}
+.card p{color:var(--muted);font-size:.93rem}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.step{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:26px;position:relative}
+.step .n{position:absolute;top:18px;right:22px;font-size:2.4rem;font-weight:900;color:var(--line)}
+.step h3{color:var(--green);margin-bottom:8px}
+.step p{color:var(--muted);font-size:.93rem}
+.feats{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.pricing{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.price-card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:26px;display:flex;flex-direction:column}
+.price-card.hero-plan{border:2px solid var(--green);position:relative;background:linear-gradient(180deg,rgba(46,232,107,.08),var(--card))}
+.plan-tag{position:absolute;top:-13px;left:50%;transform:translateX(-50%);background:var(--green);color:#04140a;font-size:.75rem;font-weight:800;padding:3px 14px;border-radius:999px}
+.price{font-size:2.1rem;font-weight:900;margin:6px 0}
+.price small{font-size:.95rem;color:var(--muted);font-weight:400}
+.price-card ul{list-style:none;margin:12px 0 20px;color:var(--muted);font-size:.88rem;flex:1}
+.price-card li{margin-bottom:8px;padding-left:20px;position:relative}
+.price-card li::before{content:"✓";position:absolute;left:0;color:var(--green);font-weight:800}
+.fine{margin-top:20px;text-align:center;color:var(--muted);font-size:.82rem}
+/* FAQ */
+.faq{max-width:760px;margin:0 auto}
+.faq details{background:var(--card);border:1px solid var(--line);border-radius:14px;margin-bottom:12px;padding:16px 20px}
+.faq summary{cursor:pointer;font-weight:700;font-size:1rem;list-style:none}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";float:right;color:var(--green);font-size:1.3rem}
+.faq details[open] summary::after{content:"–"}
+.faq p{color:var(--muted);margin-top:10px;font-size:.93rem}
+/* FORM */
+.form-card{max-width:540px;margin:0 auto;background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:32px}
+.field{margin-bottom:16px}
+.field label{display:block;font-size:.85rem;color:var(--muted);margin-bottom:6px}
+.field input,.field select{width:100%;background:var(--bg2);border:1px solid var(--line);border-radius:10px;padding:12px 14px;color:var(--text);font-size:.95rem}
+.field input:focus,.field select:focus{outline:2px solid var(--green);border-color:var(--green)}
+.success{display:none;text-align:center;padding:26px 10px}
+.success .party{font-size:2.8rem}
+/* FOOTER */
+footer{border-top:1px solid var(--line);padding:36px 0 50px;color:var(--muted);font-size:.85rem}
+footer .wrap{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap}
+footer a{color:var(--muted)}
+.permit{max-width:640px;margin-top:12px;font-size:.8rem;opacity:.8}
+@media(max-width:860px){.cards,.steps,.feats,.pricing{grid-template-columns:1fr}.demo-body{grid-template-columns:1fr}.qpane{border-right:0;border-bottom:1px solid var(--line)}}
+
+/* MODAL */
+.modal-overlay{position:fixed;inset:0;background:rgba(0,0,0,.82);backdrop-filter:blur(6px);display:none;align-items:center;justify-content:center;z-index:999;padding:20px}
+.modal-box{background:#0c1710;border:1.5px solid var(--green);border-radius:16px;padding:20px 24px;max-width:420px;width:100%;max-height:90vh;overflow-y:auto;position:relative;text-align:center}
+.modal-close{position:absolute;top:14px;right:16px;background:none;border:none;color:var(--muted);font-size:20px;cursor:pointer}
+</style>
+</head>
+<body>
+
+<nav><div class="wrap nav-in">
+  <a class="brand" href="http://localhost:3000/dashboard"><span class="bird">🦜</span><span>Rev<b>.perakit.ai</b></span></a>
+  <div class="nav-links">
+    <a href="http://localhost:3000/dashboard">Dashboard</a>
+    <a href="http://localhost:3000/session">Live Copilot</a>
+    <a href="http://localhost:3000/mock">Mock Interview</a>
+    <a href="#stealth">Invisibility</a>
+    <a href="#pricing">Pricing</a>
+  </div>
+  <a class="btn" href="http://localhost:3000/dashboard">Open Dashboard →</a>
+</div></nav>
+
+<header class="hero"><div class="wrap">
+  <span class="badge">🇮🇳 India's first Hinglish-ready AI interview copilot — Active</span>
+  <h1>Interview me <span class="hi">kabhi blank</span> mat ho.</h1>
+  <p class="lead">Rev listens to your live interview, understands the question, and shows you a ready-to-speak answer built from <b>your</b> resume — in under 3 seconds. Technical, HR, Hinglish mix — sab handle hota hai.</p>
+  
+  <div class="cta-row">
+    <a class="btn" href="http://localhost:3000/dashboard">🚀 Launch Dashboard</a>
+    <a class="btn ghost" href="http://localhost:3000/session">🦜 Live Copilot (Alt+H)</a>
+    <a class="btn ghost" href="http://localhost:3000/mock">🎤 Free Mock Practice</a>
+  </div>
+  <p class="micro">No card required. Free tier ready. English + Hinglish real-time AI.</p>
+
+  <div class="demo" id="demo">
+    <div class="demo-bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span>Live Session — Senior Backend Interview</span><span class="live-tag">● LIVE</span></div>
+    <div class="demo-body">
+      <div class="qpane"><div class="pane-label">🎧 Interviewer ne kaha</div><div class="qtext" id="qtext"></div><div class="timer" id="timer"></div></div>
+      <div class="apane"><div class="pane-label">⚡ Rev suggests</div><div class="ans" id="ans"></div><div class="resume-note">✓ Ye answer tumhare resume ke real project se banega — fabricated stories kabhi nahi.</div></div>
+    </div>
+  </div>
+</div></header>
+
+<section><div class="wrap">
+  <h2 class="sec-title">Ye dard tumne bhi mehsoos kiya hai na?</h2>
+  <div class="cards" style="margin-top:30px">
+    <div class="card"><span class="ico">😶</span><h3>"Blank ho gaya."</h3><p>Sab aata tha — us moment par yaad hi nahi aaya. 45-minute ka interview, ek blank answer, aur opportunity gayi.</p></div>
+    <div class="card"><span class="ico">📄</span><h3>"Resume alag, jawab alag."</h3><p>Generic answers interviewer turant pakad leta hai. Tumhare real numbers aur projects bahar hi nahi aate.</p></div>
+    <div class="card"><span class="ico">💸</span><h3>"$38 per session?"</h3><p>Foreign tools mehenga pricing, INR me payment jhanjhat. India ka candidate, Indian pricing deserve karta hai.</p></div>
+  </div>
+</div></section>
+
+<section style="background:var(--bg2)"><div class="wrap">
+  <h2 class="sec-title">Kaam kaise karta hai</h2>
+  <div class="steps" style="margin-top:30px">
+    <div class="step"><span class="n">1</span><h3>Setup — 2 min</h3><p>Resume upload karo, job description paste karo. Bas. Rev tumhara background samajh leta hai.</p></div>
+    <div class="step"><span class="n">2</span><h3>Live call</h3><p>Rev question sunta hai, transcript banata hai, tumhare experience se answer ready karta hai — 3 second ke andar.</p></div>
+    <div class="step"><span class="n">3</span><h3>After the call</h3><p>Full transcript + AI notes + PDF download — sab saved, review anytime.</p></div>
+  </div>
+</div></section>
+
+<section><div class="wrap">
+  <h2 class="sec-title">Sab kuch, mid-interview</h2>
+  <p class="sec-sub">Code, speech, aur answers — live handle, jab call chal rahi ho.</p>
+  <div class="feats">
+    <div class="card"><span class="ico">⚡</span><h3>Real-time answers</h3><p>Question khatm, jawab ready. 3 second ke andar screen par — kabhi freeze nahi.</p></div>
+    <div class="card"><span class="ico">📄</span><h3>Resume-based, hamesha</h3><p>Answers tumhare real projects aur numbers se bante hain. Jhooti kahani kabhi nahi.</p></div>
+    <div class="card"><span class="ico">🗣️</span><h3>Hinglish ready</h3><p>Mixed Hindi-English questions samajhta hai. Session language English ya Hinglish select karo.</p></div>
+    <div class="card"><span class="ico">💻</span><h3>Coding rounds</h3><p>Screenshot bhejo — Gemini Vision approach, code, aur bolne-wala explanation deta hai.</p></div>
+    <div class="card"><span class="ico">🎤</span><h3>Free mock interviews</h3><p>AI interviewer ke saath bolkar practice karo. Har session ka downloadable PDF report card.</p></div>
+    <div class="card"><span class="ico">🔒</span><h3>Stealth & Privacy</h3><p>Alt+H Instant Hide, floating popups, camouflage notepad mode, aur audio kabhi store nahi hota.</p></div>
+  </div>
+</div></section>
+
+<!-- 5 INVISIBILITY FEATURES (PARAKEET-AI PARITY) -->
+<section id="stealth" style="background: linear-gradient(180deg, #060b07 0%, #09190d 50%, #060b07 100%); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); padding: 75px 0;"><div class="wrap">
+  <div style="text-align:center; max-width: 760px; margin: 0 auto 40px;">
+    <span class="badge" style="background:#0e2916; border-color:#2ee86b; color:#2ee86b; display:inline-block; margin-bottom:12px;">🛡️ 100% Undetectable Invisibility</span>
+    <h2 class="sec-title" style="margin-bottom: 12px; font-size: 2.2rem;">How is Rev Invisible to Interviewers?</h2>
+    <p class="sec-sub" style="font-size: 1.05rem;">ParakeetAI-grade deep OS stealth architecture so Google Meet, Zoom, MS Teams, and online proctors cannot see or detect anything on your screen.</p>
+  </div>
+
+  <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 20px;">
+    <!-- Feature #1 -->
+    <div class="card" style="border: 1.5px solid rgba(46,232,107,0.35); background: #0c1710; box-shadow: 0 4px 20px rgba(0,0,0,0.4);">
+      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
+        <span style="font-size: 11px; font-weight: 800; color: var(--green); letter-spacing: 1px; text-transform: uppercase;">Feature #1</span>
+        <span style="font-size: 11px; background:#122b18; color:#2ee86b; padding:2px 8px; border-radius:4px; font-weight:700;">ACTIVE</span>
+      </div>
+      <h3 style="font-size: 20px; margin-bottom: 8px; color:#fff;">Invisible on Screen Share</h3>
+      <p style="color: var(--muted); font-size: 13.5px; line-height: 1.6; margin:0;">
+        Hardware-level display capture exclusion (<code>WDA_EXCLUDEFROMCAPTURE</code> on Windows / <code>NSWindowSharingNone</code> on macOS). Jab aap Google Meet ya Zoom par screen share karte hain, Rev interviewer ko <b>100% invisible</b> rehta hai — sirf aapko dikhta hai.
+      </p>
+    </div>
+
+    <!-- Feature #2 -->
+    <div class="card" style="border: 1.5px solid rgba(46,232,107,0.35); background: #0c1710; box-shadow: 0 4px 20px rgba(0,0,0,0.4);">
+      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
+        <span style="font-size: 11px; font-weight: 800; color: var(--green); letter-spacing: 1px; text-transform: uppercase;">Feature #2</span>
+        <span style="font-size: 11px; background:#122b18; color:#2ee86b; padding:2px 8px; border-radius:4px; font-weight:700;">ACTIVE</span>
+      </div>
+      <h3 style="font-size: 20px; margin-bottom: 8px; color:#fff;">Invisible in Dock / Taskbar</h3>
+      <p style="color: var(--muted); font-size: 13.5px; line-height: 1.6; margin:0;">
+        Windows Taskbar aur macOS Dock par koi application icon ya window handle show nahi hota. Rev runs silently as an undetectable background service with zero visual desktop trace.
+      </p>
+    </div>
+
+    <!-- Feature #3 -->
+    <div class="card" style="border: 1.5px solid rgba(46,232,107,0.35); background: #0c1710; box-shadow: 0 4px 20px rgba(0,0,0,0.4);">
+      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
+        <span style="font-size: 11px; font-weight: 800; color: var(--green); letter-spacing: 1px; text-transform: uppercase;">Feature #3</span>
+        <span style="font-size: 11px; background:#122b18; color:#2ee86b; padding:2px 8px; border-radius:4px; font-weight:700;">ACTIVE</span>
+      </div>
+      <h3 style="font-size: 20px; margin-bottom: 8px; color:#fff;">Invisible in Activity Monitor (or Task Manager)</h3>
+      <p style="color: var(--muted); font-size: 13.5px; line-height: 1.6; margin:0;">
+        Process name automatically masquerades as a standard system process (e.g. <code>Windows Audio Driver</code> / <code>CoreAudio Helper</code>). Agar interviewer Task Manager khulwa kar screen check kare, tab bhi zero suspicion.
+      </p>
+    </div>
+
+    <!-- Feature #4 -->
+    <div class="card" style="border: 1.5px solid rgba(46,232,107,0.35); background: #0c1710; box-shadow: 0 4px 20px rgba(0,0,0,0.4);">
+      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
+        <span style="font-size: 11px; font-weight: 800; color: var(--green); letter-spacing: 1px; text-transform: uppercase;">Feature #4</span>
+        <span style="font-size: 11px; background:#122b18; color:#2ee86b; padding:2px 8px; border-radius:4px; font-weight:700;">ACTIVE</span>
+      </div>
+      <h3 style="font-size: 20px; margin-bottom: 8px; color:#fff;">Invisible to Tab Switching</h3>
+      <p style="color: var(--muted); font-size: 13.5px; line-height: 1.6; margin:0;">
+        HackerRank, Mercer Mettl, Codility ke <code>window.onblur</code> aur <code>visibilitychange</code> triggers ko completely bypass karta hai. Test window hamesha active focus me rehti hai aur zero tab-switch warning aati hai.
+      </p>
+    </div>
+
+    <!-- Feature #5 -->
+    <div class="card" style="border: 1.5px solid rgba(46,232,107,0.35); background: #0c1710; box-shadow: 0 4px 20px rgba(0,0,0,0.4);">
+      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
+        <span style="font-size: 11px; font-weight: 800; color: var(--green); letter-spacing: 1px; text-transform: uppercase;">Feature #5</span>
+        <span style="font-size: 11px; background:#122b18; color:#2ee86b; padding:2px 8px; border-radius:4px; font-weight:700;">ACTIVE</span>
+      </div>
+      <h3 style="font-size: 20px; margin-bottom: 8px; color:#fff;">Cursor Undetectability</h3>
+      <p style="color: var(--muted); font-size: 13.5px; line-height: 1.6; margin:0;">
+        Click-through pass-through technology! Mouse cursor Rev ke overlay ke aar-paar bina ruke transparently move aur click karta hai — mouse leaves window / cursor tracking detection 100% bypass hota hai.
+      </p>
+    </div>
+  </div>
+
+  <div style="text-align: center; margin-top: 40px;">
+    <a class="btn" href="http://localhost:3000/session" style="font-size: 15px; padding: 13px 34px;">🛡️ Launch Invisible Copilot Session →</a>
+  </div>
+</div></section>
+
+<section id="pricing" style="background:var(--bg2)"><div class="wrap">
+  <h2 class="sec-title">Launch pricing — India ke liye</h2>
+  <p class="sec-sub">Instant UPI & card activation. No foreign exchange charge.</p>
+  <div class="pricing" style="margin-top:30px">
+    <div class="price-card">
+      <h3>Free Trial</h3>
+      <div class="price">₹0</div>
+      <ul><li>2 × 10-min live sessions</li><li>1 free mock interview</li><li>AI notes + PDF report</li></ul>
+      <a class="btn ghost" href="http://localhost:3000/dashboard?plan=free">Start Free</a>
+    </div>
+
+    <div class="price-card">
+      <h3>Starter</h3>
+      <div class="price">₹499</div>
+      <ul><li>5 × 30-min session credits</li><li>Resume + JD personalization</li><li>Full transcripts & notes</li><li>Valid 30 days</li></ul>
+      <button class="btn ghost" onclick="openCheckout('Starter Pack','₹499')">Pay ₹499 (UPI)</button>
+    </div>
+
+    <div class="price-card hero-plan">
+      <span class="plan-tag">MOST POPULAR</span>
+      <h3>Pro Unlimited</h3>
+      <div class="price">₹999<small>/month</small></div>
+      <ul><li>Unlimited live sessions</li><li>Gemini Vision coding help</li><li>Priority streaming speed</li><li>All mock interview packs</li></ul>
+      <button class="btn" onclick="openCheckout('Pro Unlimited','₹999/mo')">Get Pro ₹999</button>
+    </div>
+
+    <div class="price-card">
+      <h3>One-shot</h3>
+      <div class="price">₹299</div>
+      <ul><li>1 × 60-min interview pack</li><li>"Kal interview hai" plan</li><li>Valid 7 days</li><li>Full AI report</li></ul>
+      <button class="btn ghost" onclick="openCheckout('One-shot Pack','₹299')">Pay ₹299 (UPI)</button>
+    </div>
+  </div>
+  <p class="fine">*Fair-use policy apply hoti hai (20 hrs/month). 7-din full auto-refund guarantee.</p>
+</div></section>
+
+<section class="wrap">
+  <h2 class="sec-title">Sawaal jo sab poochte hain</h2>
+  <div class="faq" style="margin-top:30px">
+    <details><summary>Kya ye har interview me use kar sakta hoon?</summary><p>Jahan AI assistance allowed ya permitted ho, wahan ke liye bana hai — mock interviews, practice, aur permitted rounds ke liye best hai. Company ke rules hamesha pehle check karo.</p></details>
+    <details><summary>Hinglish chalega?</summary><p>Haan. Session language English ya Hinglish select karo — mixed Hindi-English questions bhi samajhe jaate hain.</p></details>
+    <details><summary>Mera resume aur data safe hai?</summary><p>Audio store nahi hota. Documents encrypted rehte hain, aur one-click delete-all kabhi bhi available hai.</p></details>
+    <details><summary>Coding round me kaam karega?</summary><p>Haan — screenshot-based code help live session me button dabakar screenshot upload karne par approach aur code deta hai.</p></details>
+    <details><summary>Payment kaise karun?</summary><p>UPI (GPay, PhonePe, Paytm) aur cards — instant activation milta hai.</p></details>
+  </div>
+</section>
+
+<section id="waitlist" style="background:linear-gradient(180deg,var(--bg) 0%,#0a140d 100%)"><div class="wrap">
+  <h2 class="sec-title">Dashboard & Access Unlock Karo 🦜</h2>
+  <p class="sec-sub">Details dalo — turant Dashboard activate hoga aur access mil jayega.</p>
+  <div class="form-card">
+    <form id="wlform">
+      <div class="field"><label for="name">Name</label><input id="name" name="name" required placeholder="Tumhara naam"></div>
+      <div class="field"><label for="contact">Email ya WhatsApp number</label><input id="contact" name="contact" required placeholder="you@example.com / 98XXXXXXXX"></div>
+      <div class="field"><label for="role">Current role</label><select id="role" name="role"><option>Backend Engineer</option><option>Frontend Engineer</option><option>Full-stack Developer</option><option>Data / ML</option><option>DevOps / Cloud</option><option>Other</option></select></div>
+      <div class="field"><label for="exp">Experience</label><select id="exp" name="exp"><option>0–2 years</option><option>2–5 years</option><option>5–10 years</option><option>10+ years</option></select></div>
+      <button class="btn" type="submit" style="width:100%;padding:14px 0;font-size:1rem">🚀 Unlock Dashboard & Start Free</button>
+    </form>
+    <div class="success" id="wlsuccess">
+      <div class="party">🎉</div>
+      <h3 style="margin:14px 0 8px">Access Unlocked!</h3>
+      <p style="color:var(--muted)">Dashboard par redirect ho rahe hain… (1 sec)</p>
+    </div>
+  </div>
+</div></section>
+
+<footer><div class="wrap">
+  <div>
+    <div class="brand" style="margin-bottom:10px"><span class="bird">🦜</span><span>Rev<b style="color:var(--green)">.perakit.ai</b></span></div>
+    <p class="permit">Rev is built for interviews and calls where AI assistance is permitted. Always follow your employer's rules.<br><a href="http://localhost:3000/dashboard">Dashboard</a> · <a href="http://localhost:3000/session">Live Copilot</a> · <a href="http://localhost:3000/mock">Mock Interview</a></p>
+  </div>
+  <div style="text-align:right"><p>© 2026 Rev.perakit.ai</p><p style="margin-top:6px">Made in India 🇮🇳</p></div>
+</div></footer>
+
+<!-- PAYMENT MODAL -->
+<div class="modal-overlay" id="payModal">
+  <div class="modal-box">
+    <button class="modal-close" onclick="closeCheckout()">✕</button>
+    <div style="font-size:12px; color:var(--green); font-weight:bold; text-transform:uppercase;">Instant UPI Activation</div>
+    <h3 style="margin:6px 0 10px; font-size:20px;" id="modalPlanTitle">Upgrade Plan</h3>
+    <div style="font-size:28px; font-weight:900; color:var(--green); margin-bottom:14px;" id="modalPlanPrice">₹999</div>
+
+    <div style="background:#070e09; border:1.5px solid rgba(46,232,107,0.3); border-radius:12px; padding:12px; margin-bottom:14px; text-align:center;">
+      <div style="display:inline-block; background:#f0f4f8; padding:6px; border-radius:12px; margin-bottom:8px; max-width:190px; width:100%;">
+        <img src="ahmad-upi-qr.jpg" alt="Ahmad Khan Google Pay QR Code" style="width:100%; max-height:200px; object-fit:contain; display:block; border-radius:8px;">
+      </div>
+      <div>
+        <span style="background:#102113; color:var(--green); padding:4px 10px; border-radius:6px; font-size:12px; font-weight:bold; border:1px solid rgba(46,232,107,0.4);">
+          ahmadkhankhan6840-1@okaxis
+        </span>
+      </div>
+    </div>
+
+    <button class="btn" style="width:100%; padding:13px 0;" onclick="completeCheckout()">
+      ✓ Pay & Activate Dashboard
+    </button>
+    <div style="font-size:11px; color:#6e8773; margin-top:10px;">
+      🔒 100% Secure · 7-day money-back guarantee
+    </div>
+  </div>
+</div>
+
+<script>
+// Demo: 3 rotating Q&A
+const demos=[
+ {q:"Tell me about a time you improved production performance.",a:"<strong>Seedha bolo:</strong> \"Meri payment API peak traffic me 4-second latency de rahi thi. Maine N+1 query trace karke eager loading lagayi aur Redis cache add kiya — latency 300ms par aa gayi, 92% improvement.\"<ul><li><b>S</b>: Peak-hour payment API timeouts</li><li><b>T</b>: Root cause — N+1 + missing cache</li><li><b>R</b>: 4s → 300ms, 92% improvement</li></ul>"},
+ {q:"Microservices me ek service fail ho jaye toh kya karoge?",a:"<strong>Seedha bolo:</strong> \"Pehle circuit breaker pattern apply karunga — fallback response do, failing service ko recover ka time do, aur retry with exponential backoff rakho. Health checks se auto-isolate hoga.\"<ul><li>Circuit breaker: fail-fast, graceful degradation</li><li>Retry + timeout budgets per service</li><li>Observability: trace karo kahan break hua</li></ul>"},
+ {q:"Why are you looking to switch from your current role?",a:"<strong>Seedha bolo:</strong> \"Main 3.5 saal se payments domain me hoon aur scale par kaam karna chahta hoon — distributed systems aur high-throughput APIs me deep jaana hai, jo yahan ki role se seedha align hota hai.\"<ul><li>Growth-oriented reason, no negativity</li><li>Company ke tech stack se link karo</li></ul>"}
+];
+let di=0;
+function play(){
+  const q=demos[di], qt=document.getElementById('qtext'), ans=document.getElementById('ans'), tm=document.getElementById('timer');
+  if (!qt || !ans || !tm) return;
+  qt.textContent=''; ans.innerHTML=''; tm.textContent='';
+  let i=0; const t0=Date.now();
+  const tq=setInterval(()=>{ qt.textContent=q.q.slice(0,++i); if(i>=q.q.length) clearInterval(tq); },24);
+  setTimeout(()=>{ ans.innerHTML=q.a; tm.textContent='answered in '+((Date.now()-t0)/1000).toFixed(1)+'s'; }, q.q.length*24+900);
+  di=(di+1)%demos.length; setTimeout(play, 11000);
+}
+play();
+
+// Payment Modal handlers
+let activePlan = 'pro';
+function openCheckout(name, price) {
+  document.getElementById('modalPlanTitle').textContent = 'Activate ' + name;
+  document.getElementById('modalPlanPrice').textContent = price;
+  document.getElementById('payModal').style.display = 'flex';
+}
+function closeCheckout() {
+  document.getElementById('payModal').style.display = 'none';
+}
+function completeCheckout() {
+  const user = JSON.parse(localStorage.getItem('rev_user') || '{}');
+  user.plan = 'pro';
+  localStorage.setItem('rev_user', JSON.stringify(user));
+  document.getElementById('modalPlanTitle').textContent = 'Payment Successful! 🎉';
+  setTimeout(() => {
+    window.location.href = 'http://localhost:3000/dashboard';
+  }, 1000);
+}
+
+// Waitlist form -> Save user & redirect straight to Dashboard
+document.getElementById('wlform').addEventListener('submit', e => {
+  e.preventDefault();
+  const nameVal = document.getElementById('name').value;
+  const roleVal = document.getElementById('role').value;
+  const contactVal = document.getElementById('contact').value;
+  const expVal = document.getElementById('exp').value;
+  
+  const v = { name: nameVal, contact: contactVal, role: roleVal, exp: expVal, plan: 'pro' };
+  localStorage.setItem('rev_user', JSON.stringify(v));
+
+  document.getElementById('wlform').style.display = 'none';
+  document.getElementById('wlsuccess').style.display = 'block';
+
+  setTimeout(() => {
+    window.location.href = 'http://localhost:3000/dashboard';
+  }, 1200);
+});
+</script>
+</body>
+</html>

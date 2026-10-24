@@ -1,0 +1,1 @@
+{"compilerOptions":{"lib":["ES2022"],"types":["node"]},"extends":"../../tsconfig.base.json","include":["src","scripts"]}

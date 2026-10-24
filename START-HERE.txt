@@ -1,0 +1,58 @@
+====================================================
+🦜 Rev.perakit.ai — FINAL PACKAGE (20 Oct 2026)
+====================================================
+
+Ye folder tumhara poora product hai: website + engine +
+docs + deploy guide. Kul kharcha: ₹0 (sab free tier).
+
+----------------------------------------------------
+STEP 1 — Sirf PEHLI baar (2 cheezein)
+----------------------------------------------------
+1) Isi folder me jo CHALAO.bat hai, bas usi par DOUBLE-CLICK karo.
+   (Install, engine, website, browser — sab apne aap khul jayega.)
+
+2) CHALAO.bat agar .env file mange, to:
+   - Notepad kholo
+   - Ye 3 line likho (apni ASLI keys ke saath):
+       DEEPGRAM_API_KEY=...tumhari key...
+       GROQ_API_KEY=gsk_...tumhari key...
+       LLM_PROVIDER=groq
+   - Save as: code\.env   (File type: "All Files" — warna .env.txt ban jayega!)
+   - Phir CHALAO.bat dobara chalao.
+
+----------------------------------------------------
+STEP 2 — Chalane ke baad
+----------------------------------------------------
+Browser me khulega: http://localhost:3000/session
+- Resume ki PDF upload karo
+- "Interviewer Tab Audio jodo" — Meet/Zoom wala tab select karo,
+  "Share tab audio" ON rakho
+- Interviewer jo bolega, uska jawab ~1 second me aayega
+- Stop dabao → Post-call notes milenge
+- Free Mock Interview: home page se /mock kholo
+
+----------------------------------------------------
+FOLDER ME KYA HAI
+----------------------------------------------------
+code/     — poora software (website + engine + database)
+docs/     — tech plan, deploy guide (DEPLOY.md), landing copy
+landing/  — landing page (double-click index.html = khul jayegi)
+skills/   — Deepgram developer skills
+CHALAO.bat — one-click chalane wala
+
+----------------------------------------------------
+DUSRON KO DIKHANA HO (deploy)
+----------------------------------------------------
+docs/DEPLOY.md kholo — GitHub + Render + Vercel ka poora
+Hinglish guide hai. ~15 minute, ₹0 me permanent link.
+
+----------------------------------------------------
+PROBLEM AAYE TO
+----------------------------------------------------
+1) "package.json nahi mila" → terminal me pehle `cd code` likhna tha
+2) Gateway start nahi ho raha → .env me keys check karo
+3) Mic nahi chal raha → browser me mic permission allow karo
+4) Aur kuch → apne assistant (Muse) ko screenshot bhej do 😄
+
+"Interview me kabhi blank mat ho."
+====================================================

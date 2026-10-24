@@ -1,0 +1,173 @@
+[
+  {
+    "category": "english-technical",
+    "id": "t01",
+    "keyterms": [
+      "rate limiter",
+      "Redis",
+      "distributed"
+    ],
+    "speaker": "interviewer",
+    "text": "Can you explain how you would design a rate limiter for a distributed system using Redis, and what happens when a node fails?",
+    "lang": "en",
+    "lang_p": 0.99,
+    "wer": 0.0,
+    "key_found": 3,
+    "key_total": 3,
+    "hyp": "Can you explain how you would design a rate limiter for a distributed system using Redis?  And what happens when a node fails?"
+  },
+  {
+    "category": "english-technical",
+    "id": "t02",
+    "keyterms": [
+      "process",
+      "thread",
+      "multiprocessing",
+      "multithreading",
+      "Python"
+    ],
+    "speaker": "interviewer",
+    "text": "What is the difference between process and thread, and when would you use multiprocessing over multithreading in Python?",
+    "lang": "en",
+    "lang_p": 1.0,
+    "wer": 27.8,
+    "key_found": 3,
+    "key_total": 5,
+    "hyp": "Which is the difference between process and thread?  And when would you use multi-processing over multi-threading in python?"
+  },
+  {
+    "category": "english-behavioral-numbers",
+    "id": "t03",
+    "keyterms": [
+      "percentage",
+      "latency",
+      "requests per second"
+    ],
+    "speaker": "interviewer",
+    "text": "Tell me about a time you improved performance. By what percentage did latency drop, and how many requests per second were you handling?",
+    "lang": "en",
+    "lang_p": 0.99,
+    "wer": 0.0,
+    "key_found": 3,
+    "key_total": 3,
+    "hyp": "Tell me about a time you improved performance.  By what percentage did latency drop?  And how many requests per second were you handling?"
+  },
+  {
+    "category": "english-technical",
+    "id": "t04",
+    "keyterms": [
+      "Kubernetes",
+      "pod scheduling",
+      "etcd",
+      "control plane"
+    ],
+    "speaker": "interviewer",
+    "text": "How does Kubernetes handle pod scheduling, and what is the role of etcd in the control plane?",
+    "lang": "en",
+    "lang_p": 1.0,
+    "wer": 0.0,
+    "key_found": 4,
+    "key_total": 4,
+    "hyp": "How does Kubernetes handle pod scheduling and what is the role of ETCD in the control plane?"
+  },
+  {
+    "category": "hinglish-code-switch",
+    "id": "t05",
+    "keyterms": [
+      "database optimization",
+      "PostgreSQL",
+      "indexing"
+    ],
+    "speaker": "interviewer",
+    "text": "Toh aap mujhe batao, aapne apne last project me database optimization kaise kiya tha, PostgreSQL me indexing use kiya tha kya?",
+    "lang": "hi",
+    "lang_p": 0.91,
+    "wer": 104.8,
+    "key_found": 0,
+    "key_total": 3,
+    "hyp": "तो आप मुझे बताओ, आपने अपने लास्ट प्रोजेक्त में देटेबेस अप्तमाइशेशन कैसे किया ता?  पोस्ट्क्रेस क्यूल में इंडेक्सिंग यॐस किया था क्या?"
+  },
+  {
+    "category": "hinglish-code-switch",
+    "id": "t06",
+    "keyterms": [
+      "production",
+      "server",
+      "rollback",
+      "debugging"
+    ],
+    "speaker": "interviewer",
+    "text": "Agar production me server down ho jaye raat ko, toh aapka approach kya hoga, pehle rollback karoge ya debugging start karoge?",
+    "lang": "hi",
+    "lang_p": 0.75,
+    "wer": 100.0,
+    "key_found": 0,
+    "key_total": 4,
+    "hyp": "अगर प्रडक्षन में सर्वर डाउन हो जाए राथ को, तो आपका अप्रोच क्या होगा?  पहले रोलबैक करोगे या दीबागिं स्थ करोगे?"
+  },
+  {
+    "category": "hinglish-hr",
+    "id": "t07",
+    "keyterms": [
+      "switch",
+      "expected CTC"
+    ],
+    "speaker": "interviewer",
+    "text": "Aap apne current company me kitne saal se ho, aur aap switch kyun karna chahte ho? Expected CTC kya hai aapka?",
+    "lang": "hi",
+    "lang_p": 0.9,
+    "wer": 109.5,
+    "key_found": 0,
+    "key_total": 2,
+    "hyp": "अप अपने करन्त कम्पनी में किने साल से हो  और अप सविछ कुँन करना चाहते हो  अपने करन्त करन्त कुँन करना चाहते हो"
+  },
+  {
+    "category": "hindi-mixed",
+    "id": "t08",
+    "keyterms": [
+      "strength",
+      "team"
+    ],
+    "speaker": "interviewer",
+    "text": "Aap mujhe apne baare me kuch bataiye, aapki sabse badi strength kya hai aur aap team ke saath kaise kaam karte hain?",
+    "lang": "hi",
+    "lang_p": 0.93,
+    "wer": 104.5,
+    "key_found": 0,
+    "key_total": 2,
+    "hyp": "आप मुझे अपने बारे में कुछ बताये, आपकी सब से बड़ी स्ट्रेंथ क्या है और आप तीम के साथ कैसे काम करते है?"
+  },
+  {
+    "category": "english-technical",
+    "id": "t09",
+    "keyterms": [
+      "longest substring",
+      "repeating characters",
+      "time complexity"
+    ],
+    "speaker": "interviewer",
+    "text": "Write a function that finds the longest substring without repeating characters. What will be the time complexity of your solution?",
+    "lang": "en",
+    "lang_p": 1.0,
+    "wer": 0.0,
+    "key_found": 3,
+    "key_total": 3,
+    "hyp": "Write a function that finds the longest substring without repeating characters.  What will be the time complexity of your solution?"
+  },
+  {
+    "category": "hinglish-code-switch",
+    "id": "t10",
+    "keyterms": [
+      "Microservices",
+      "circuit breaker"
+    ],
+    "speaker": "interviewer",
+    "text": "Microservices architecture me aapne kabhi kaam kiya hai? Agar ek service fail ho jaye toh aap circuit breaker pattern kaise implement karoge?",
+    "lang": "hi",
+    "lang_p": 0.81,
+    "wer": 104.5,
+    "key_found": 0,
+    "key_total": 2,
+    "hyp": "मिक्रो सर्वाशाज आक्टेक्छर मी आपने कभी काम किया है  अगर एक सर्विस फेल हो जाए तो आप सर्कित ब्रेकर पाटन कैसे इंपलमेंट करोगे"
+  }
+]
